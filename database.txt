@@ -1,0 +1,30 @@
+-- Membuat database
+CREATE DATABASE IF NOT EXISTS webartikel;
+USE webartikel;
+
+-- Tabel: users (admin/penulis)
+CREATE TABLE users (
+    id_user INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    nama_lengkap VARCHAR(100),
+    role ENUM('admin', 'penulis') DEFAULT 'penulis'
+);
+
+-- Tabel: kategori (kategori artikel)
+CREATE TABLE kategori (
+    id_kategori INT AUTO_INCREMENT PRIMARY KEY,
+    nama_kategori VARCHAR(100) NOT NULL
+);
+
+-- Tabel: artikel (konten artikel blog)
+CREATE TABLE artikel (
+    id_artikel INT AUTO_INCREMENT PRIMARY KEY,
+    judul VARCHAR(255) NOT NULL,
+    isi TEXT NOT NULL,
+    tanggal DATE DEFAULT CURRENT_DATE,
+    id_user INT,
+    id_kategori INT,
+    FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE,
+    FOREIGN KEY (id_kategori) REFERENCES kategori(id_kategori) ON DELETE SET NULL
+);
