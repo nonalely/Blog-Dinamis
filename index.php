@@ -16,16 +16,28 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori");
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <head>
     <meta charset="UTF-8">
-    <title>WebArtikel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Artikel</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap JS (opsional, tapi bagus untuk komponen interaktif) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
 </head>
 <body class="bg-light">
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
     <div class="container">
-        <a class="navbar-brand" href="index.php"><strong>WebArtikel</strong></a>
+        <a class="navbar-brand" href="index.php"><strong>Web Artikel</strong></a>
         <div class="d-flex">
             <?php if (isset($_SESSION['user'])): ?>
                 <a href="dashboard.php" class="btn btn-outline-primary me-2">⚙️ Dashboard</a>
@@ -76,7 +88,7 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori");
 
             <div class="mb-4">
                 <h5>ℹ️ Tentang</h5>
-                <p>WebArtikel adalah blog sederhana untuk latihan membuat sistem manajemen konten.</p>
+                <p>Web Artikel sederhana untuk latihan membuat sistem manajemen konten.</p>
             </div>
         </div>
 
@@ -85,7 +97,7 @@ $kategori = mysqli_query($conn, "SELECT * FROM kategori");
 
 <!-- Footer -->
 <footer class="text-center mt-5 py-4 bg-white border-top">
-    <small>&copy; <?= date('Y') ?> WebArtikel - Dibuat dengan ❤️ dan PHP</small>
+    <small>&copy; <?= date('Y') ?> Web Artikel - Dibuat dengan ❤️ dan PHP</small>
 </footer>
 
 </body>
