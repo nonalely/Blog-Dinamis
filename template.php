@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>WebArtikel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://revivalarticle.great-site.net/" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header -->
     <div class="bg-primary text-white p-3 text-center">
         <h1 class="m-0">WebArtikel</h1>
-        <p class="m-0">Berbagi Cerita dan Informasi Menarik</p>
+        <p class="m-0">Berbagai Cerita dan Informasi Menarik</p>
     </div>
 
     <!-- Navigasi -->
@@ -57,7 +57,7 @@
 
                 <div class="mb-4">
                     <h5>Tentang</h5>
-                    <p>WebArtikel adalah blog sederhana untuk menyebarkan cerita dan artikel menarik dari berbagai topik.</p>
+                    <p>WebArtikel sederhana untuk menyebarkan cerita dan artikel menarik dari berbagai topik.</p>
                 </div>
             </div>
         </div>
